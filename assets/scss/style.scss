@@ -1,0 +1,124 @@
+$slate: #0f172a;
+$emerald: #059669;
+$sky: #0284c7;
+$white: #ffffff;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $slate;
+}
+
+.navbar {
+  background-color: $slate;
+}
+
+.btn-emerald {
+  @extend .btn;
+  background-color: $emerald;
+  color: $white;
+  &:hover {
+    background-color: darken($emerald, 7%);
+    color: $white;
+  }
+}
+
+.btn-sky {
+  @extend .btn;
+  background-color: $sky;
+  color: $white;
+  &:hover {
+    background-color: darken($sky, 7%);
+    color: $white;
+  }
+}
+
+.card {
+  border: none;
+  border-radius: .75rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,.05);
+  transition: transform .3s ease;
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.hero {
+  position: relative;
+  background: url('https://via.placeholder.com/1600x600?text=Hero') center/cover no-repeat;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15,23,42,.6);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width:100%;
+  }
+}
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  img {
+    height: 50px;
+    margin: 0 2rem;
+    animation: marquee 20s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: $emerald;
+  color: $white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 1rem;
+  @media (max-width: 992px) {
+    column-count: 2;
+  }
+  @media (max-width: 576px) {
+    column-count: 1;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+  }
+}
+
+.cta-strip {
+  background: $sky;
+  color: $white;
+}
+
+footer {
+  background: $slate;
+  color: $white;
+  a { color: $white; }
+}
