@@ -3,9 +3,9 @@
   "short_name": "Adi Dharma",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192.png?text=ADA",
+      "src": "assets/img/icon.svg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/svg+xml"
     }
   ],
   "theme_color": "#0f172a",
