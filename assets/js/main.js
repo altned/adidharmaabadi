@@ -9,4 +9,5 @@ document.addEventListener('DOMContentLoaded', function () {
       form.classList.add('was-validated');
     }, false);
   });
+  AOS.init({ once: true });
 });
