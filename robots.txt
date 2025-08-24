@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adidharmaabadi.co.id/sitemap.xml
