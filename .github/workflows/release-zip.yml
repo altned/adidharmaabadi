@@ -1,0 +1,15 @@
+name: Release ZIP
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create zip
+        run: zip -r site-bundle.zip . -x '.git/*'
+      - uses: actions/upload-artifact@v3
+        with:
+          name: site-bundle
+          path: site-bundle.zip
